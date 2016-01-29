@@ -1,0 +1,8 @@
+- name: Tresane
+  url: https://api.twitch.tv/kraken/streams/flux9
+- name: Bigchap
+  url: https://api.twitch.tv/kraken/streams/brisp
+- name: Cptkrunk
+  url: https://api.twitch.tv/kraken/streams/sotpos
+- name: Damitus
+  url: https://api.twitch.tv/kraken/streams/damituswow
