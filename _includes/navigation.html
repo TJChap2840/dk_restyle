@@ -1,0 +1,47 @@
+<nav class="navbar navbar-inverse navbar-static-top">
+<div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Dragon Knight</a>
+    </div>
+    <ul class="nav navbar-nav">
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" %}
+            {% if node.title != "Archive" and node.title != "Hearthstone Tournament" %}
+            <li><a href="{{ node.url }}">{{ node.title }}</a>
+            {% endif %}
+          {% endif %}
+        {% endif %}  
+      {% endfor %}
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" roles="botton" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          {% for resource in site.resource_list %}
+            <li><a href="{{ resource[1] }}">{{ resource[0] }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right nav-pills">
+      <li> 
+        <a href="https://www.youtube.com/channel/UC8BXVlTC8SiL3Y_NIXQpnzg" class="btn btn-social-icon btn-youtube">
+          <i class="fa fa-youtube-square">&nbsp; Youtube</i>
+        </a>
+      </li>
+      <li> 
+        <a href="https://github.com/TJChap2840/dragonknight" class="btn btn-social-icon btn-github">
+          <i class="fa fa-github-square">&nbsp; GitHub</i>
+        </a>
+      </li>
+    </ul>
+</nav>
+
+<nav class="container primary">
+    <a class="brand three columns" href="/">Dragon Knight</a>
+    <ul class="nine columns" style="list-style-type: none; padding: 0">
+      <!-- <li class="brand"><a href="/">Dragon Knight</a></li> -->
+      <li><a href="/">About</a></li>
+      <li><a href="/">Raid Team</a></li>
+    </ul>
+  </nav>

@@ -1,0 +1,25 @@
+---
+layout: default
+comments: True
+---
+<div class="row">
+  <div class="two columns"></div>
+  <div class="ten columns u-pull-right post">
+    <h4>{{ page.title }}</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="two columns">
+    <p class="post-date">
+      {{ page.date | date: " %-d %B" }}
+    </p>
+    <p class="post-date">
+      {{ page.date | date: "%Y" }}
+    </p>
+  </div>
+  <div class="ten columns post">
+    {{content}}
+  </div>
+</div>
+
+

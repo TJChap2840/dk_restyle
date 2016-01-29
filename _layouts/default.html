@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+{% include head.html %}
+<body>
+  <script type="text/javascript">
+    $(function(){
+      mmocNews();
+    });
+  </script>
+
+  <div class="wrap">
+    <div class="band header">
+      <header class="container main">
+        <h1 class="logo"><a href="/">Dragon Knight</a></h1>
+      </header>
+    </div>
+    <div class="band navigation">
+      <nav class="container primary">
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="#">Raid Team</a></li>
+          <li><a href="#">Resources</a>
+            <ul>
+              <li><a href="#">Guides</a></li>
+              <li><a href="#">Best in Slot</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="band content">
+      <div class="container">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  <div class="band footer">
+    <footer class="container">
+      <div class="row">
+        <div class="one-third column mmoc">
+          <h6>MMO Champion Feed</h6>
+          {% for i in (1..5) %}
+            <li><a id="mmo{{ i }}"></a></li>
+          {% endfor %}
+        </div>
+        <div class="one-third column">
+          <p>MMO-C</p>
+        </div>
+        <div class="one-third column">
+          <p>MMO-C</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

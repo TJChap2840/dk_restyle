@@ -1,0 +1,31 @@
+---
+layout: default
+title: Home
+---
+
+<!-- <div class="row jumbotron"></div> -->
+<div class="row">
+  <div class="eight columns">
+    {% for post in paginator.posts %}
+      <div>
+        <b class="post-title">{{ post.title }}</b>
+        <time class="u-pull-right" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+        <!-- <p class="post-date">{{ post.date | date_to_string }}</p> -->
+        </br>
+        <div class="post-content-truncate post">
+          {% if post.content contains "<!-- more -->" %}
+            {{ post.content | split:"<!-- more -->" | first % }}
+          {% else %}
+            {{ post.content | truncatewords:100 }}
+          {% endif %}
+        </div>
+        <div style="text-align: right;">
+          <a href="{{post.url}}">read more..</a>
+        </div>
+        </br>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="four columns">
+  </div>
+</div>
