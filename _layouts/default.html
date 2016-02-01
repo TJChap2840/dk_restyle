@@ -2,6 +2,7 @@
 <html lang="en-us">
 {% include head.html %}
 <body>
+  {% include google_analytics.html %}
   {% assign sorted_streamers = site.data.streamers | sort: 'name' %}
   <script type="text/javascript">
     $(function(){
@@ -23,13 +24,13 @@
       <nav class="container primary">
         <ul>
           <li><a href="/about/">About</a></li>
-          <li><a href="#">Raid Team</a></li>
-          <li><a href="#">Resources</a>
+          <li><a href="/raid_team/">Raid Team</a></li>
+          <!-- <li><a href="#">Resources</a>
             <ul>
               <li><a href="#">Guides</a></li>
               <li><a href="#">Best in Slot</a></li>
             </ul>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </div>
@@ -69,7 +70,7 @@
             <a id="{{ streamer.name }}">
               <div class="row">
                 <b class="one-half column">{{ streamer.name }}</b>
-                <div class="one-half column" id="{{ streamer.name }}Status" style="text-align: right;></div>
+                <div class="one-half column" id="{{ streamer.name }}Status" style="text-align: right;"></div>
               </div>
               <div class="row" id="stream">
                 <div id="{{ streamer.name }}Title"></div>

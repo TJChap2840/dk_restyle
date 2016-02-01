@@ -5,6 +5,11 @@ body {
 a {
   color: #198fb3; }
 
+.disabled {
+  display: none;
+  visibility: hidden;
+}
+
 /* Baseline Grid
 ---------------------------------------- */
 h1 { font-size: 4.9rem; line-height: 49px; margin-bottom: 14px; }
@@ -126,6 +131,17 @@ nav.primary ul li:hover > a {
   background-size: cover;
   /*border-radius: 4px;*/
   height: 300px;
+}
+
+.content .button {
+  height: 28px;
+  line-height: 28px;
+  border: none;
+  color: rgba(255,255,255,0.4);
+}
+
+.content .button:hover {
+  color: #C19C4D;
 }
 
 /* Post

@@ -3,8 +3,9 @@ layout: default
 title: Home
 ---
 <div class="row">
- <div class="jumbotron">
- </div>
+  <a href="/pvp_event/">
+    <div class="jumbotron"></div>
+  </a>
 </div>
 <div class="row">
   <div>
@@ -29,6 +30,17 @@ title: Home
       </div>
     {% endfor %}
   </div>
-  <div class="four columns">
+  <div>
+  {% if paginator.next_page %}
+    <a class="button" href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="col-md-6 btn btn-default" role="button"><i class="fa fa-angle-double-left fa-fw"></i>Older</a>
+  {% else %}
+    <a class="button diabled" href="{{ paginator.next_page_path | prepend: site.baseurl }}" role="button"><i class="fa fa-angle-double-left fa-fw"></i>Older</a>
+  {% endif %}
+  
+  {% if paginator.previous_page %}
+    <a class="button u-pull-right" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" role="button">Newer<i class="fa fa-angle-double-right fa-fw"></i></a>
+  {% else %}
+    <a class="button u-pull-right disabled" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" role="button">Newer<i class="fa fa-angle-double-right fa-fw"></i></a>
+  {% endif %}
   </div>
 </div>

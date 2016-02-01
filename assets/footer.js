@@ -10,7 +10,7 @@ function mmocNews() {
       $.each(data.responseData.feed.entries, function(key, value) {
         counter++;
         document.getElementById("mmo" + counter).href = value.link;
-        document.getElementById("mmo" + counter).innerHTML = "> " + value.title; 
+        document.getElementById("mmo" + counter).innerHTML = '<i class="fa fa-caret-right fa-fw fa-1"></i>' + value.title; 
       });
     }
   });
