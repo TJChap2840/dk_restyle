@@ -1,0 +1,28 @@
+- player: Bigchap
+  starting: 1000
+  characters:
+    - name: Bigchap
+      server: Boulderfist
+    - name: Brisp
+      server: Boulderfist
+- player: Evgenimalkin
+  starting: 100000
+  characters:
+    - name: Evgenimalkin
+      server: Boulderfist
+    - name: Marshboa
+      server: Boulderfist
+- player: Tresane
+  starting: 1
+  characters:
+    - name: Tresane
+      server: Boulderfist
+    - name: Anziel
+      server: Boulderfist
+    - name: Admei
+      server: Boulderfist
+- player: Varos
+  starting: 0
+  characters:
+    - name: Varos
+      server: Boulderfist

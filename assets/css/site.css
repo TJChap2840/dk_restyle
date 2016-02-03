@@ -154,6 +154,15 @@ nav.primary ul li:hover > a {
   color: #C19C4D;
 }
 
+.post h4 > a {
+  color: #C19C4D;
+  text-decoration: none;
+}
+
+.post h4 > a:hover {
+  text-decoration: underline;
+}
+
 .post time {
   color: rgba(255,255,255,0.1);
 }
@@ -199,4 +208,12 @@ nav.primary ul li:hover > a {
 
 .wclogs a {
   font-size: 10px;
+}
+
+.streamers a {
+  text-decoration: none;
+}
+
+.streamers a:hover {
+  text-decoration: underline;
 }

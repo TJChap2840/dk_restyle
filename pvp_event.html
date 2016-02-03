@@ -4,53 +4,64 @@ title: PvP Event
 ---
 
 <script type="text/javascript">
-  $(document).ready(
-  function(){
-    var contestants = [];
-    var players = [];
-    {% for player in site.data.pvp_event %}
-        var name = "{{player.name}}";
-        var server = "{{player.server}}";
-        var starting = "{{player.starting_hk}}"
-        contestants.push({name: name, server: server, starting: starting});
-    {% endfor %}
+  // $(document).ready(
+  // function(){
+  //   var contestants = [];
+  //   var players = [];
+  //   {% for player in site.data.pvp_event %}
+  //       var name = "{{player.player}}";
+  //       var starting = "{{player.starting}}"
+  //       var json = '{player: "' + name + '",';
+  //       json += 'starting: "' + starting + '",';
+  //       json += "characters: [";
+  //       var delimiter = "{";
+  //       {% for character in player.characters %}
+  //         var character_name = "{{character.name}}";
+  //         var character_server = "{{character.server}}";
+  //         json += delimiter + 'name: "' + character_name + '",';
+  //         json += 'server: "' + character_server + '"}';
+  //         delimiter = ",{";
+  //       {% endfor %}
+  //       json += "]}";
+  //       // console.log(json);
+  //       contestants.push(JSON.parse(json));
+  //   {% endfor %}
 
-    for (var i = 0; i < contestants.length; i++) {
-      var name = contestants[i].name;
-      var server = contestants[i].server;
-      var url = "https://us.api.battle.net/wow/character/" + server + "/" + name  + "?fields=pvp&locale=en_US&apikey=3tgfhwvjya9h9kpekjdyz45q3uhj2978";
-      var data = $.parseJSON($.ajax({
-        url: url,
-        dataType: 'json',
-        async: false
-      }).responseText);
-      var weekend_kills = data.totalHonorableKills - contestants[i].starting;
-      players.push({name: data.name, kills: weekend_kills});
-    }
+  //   for (var i = 0; i < contestants.length; i++) {
+  //     var name = contestants[i].name;
+  //     var server = contestants[i].server;
+  //     var url = "https://us.api.battle.net/wow/character/" + server + "/" + name  + "?fields=pvp&locale=en_US&apikey=3tgfhwvjya9h9kpekjdyz45q3uhj2978";
+  //     var data = $.parseJSON($.ajax({
+  //       url: url,
+  //       dataType: 'json',
+  //       async: false
+  //     }).responseText);
+  //     var weekend_kills = data.totalHonorableKills - contestants[i].starting;
+  //     players.push({name: data.name, kills: weekend_kills});
+  //   }
 
-    var sortable = [];
-    for (var player in players) {
-      sortable.push([players[player].name, players[player].kills]);
-    }
-    sortable.sort(function(a, b) {return b[1] - a[1]});
-    var innerHTML;
-    for (var i = 0; i < sortable.length; i++) {
-      var playerName = sortable[i][0];
-      var playerHK = sortable[i][1];
-      innerHTML += "<tr><td>" + (i+1) + "</td><td style='min-width: 400px;'>" + playerName + "</td><td>" + playerHK + "</td></tr>";
-    }
-    console.log(innerHTML);
-    $("#leaderboard").html(innerHTML);
-  });
+  //   var sortable = [];
+  //   for (var player in players) {
+  //     sortable.push([players[player].name, players[player].kills]);
+  //   }
+  //   sortable.sort(function(a, b) {return b[1] - a[1]});
+  //   var innerHTML;
+  //   for (var i = 0; i < sortable.length; i++) {
+  //     var playerName = sortable[i][0];
+  //     var playerHK = sortable[i][1];
+  //     innerHTML += "<tr><td>" + (i+1) + "</td><td style='min-width: 400px;'>" + playerName + "</td><td>" + playerHK + "</td></tr>";
+  //   }
+  //   console.log(innerHTML);
+  //   $("#leaderboard").html(innerHTML);
+  // });
 </script>
 
 <div class="row">
   <div class="eight columns offset-by-two post">
-<!-- <div class="col-md-8 col-md-offset-2"> -->
     <h4>Honorable Kill Event</h4>
     <b>Date:</b>
     <ul>
-      <li>Feb 3rd to Feb 8th</li>
+      <li>Feb 5th to Feb 7th (7PM Start and Finish)</li>
       <li>Week of Bonus Honor Event</li>
       <li>Sign up on guild calendar</li>
     </ul>
@@ -59,6 +70,7 @@ title: PvP Event
       <li>Winner gets to change the guild tabard and temporarily gets a special guild rank</li>
       <li>2nd and 3rd get a special guild rank</li>
       <li>Honorable kills will be recorded when event starts</li>
+      <li>You can compete with multiple characters</li>
     </ul>
     <b>Rules:</b>
     <ul>
