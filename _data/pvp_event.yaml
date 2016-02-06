@@ -8,8 +8,32 @@
   main: Bigchap
 - player: Brasp
   server: Boulderfist
-  starting: 1883
+  starting: 1529
   main: Bigchap
+- player: Blackbutte
+  server: Boulderfist
+  starting: 56465
+  main: Blackbutte
+- player: Bottlerocket
+  server: Boulderfist
+  starting: 35842
+  main: Blackbutte
+- player: Butonz
+  server: Maiev
+  starting: 409
+  main: Buttonnzz
+- player: Buttonnzz
+  server: Maiev
+  starting: 4829
+  main: Buttonnzz
+- player: Damst
+  server: Maiev
+  starting: 3456
+  main: Damitus
+- player: Deathsexay
+  server: Bloodscalp
+  starting: 6350
+  main: Deathsexay
 - player: Evgenimalkin
   server: Boulderfist
   starting: 121186
@@ -22,6 +46,73 @@
   server: Boulderfist
   starting: 12502
   main: Evgenimalkin
+- player: Felene
+  server: Boulderfist
+  starting: 22083
+  main: Felene
+- player: Flarez
+  server: Boulderfist
+  starting: 176952
+  main: Flarez
+- player: Ghains
+  server: Boulderfist
+  starting: 21710
+  main: Ghains
+
+- player: Baristan
+  server: Boulderfist
+  starting: 5710
+  main: Heilo
+- player: Dubudee
+  server: Dunemaul
+  starting: 32196
+  main: Heilo
+- player: Heilo
+  server: Dunemaul
+  starting: 39497
+  main: Heilo
+- player: Schuch
+  server: Boulderfist
+  starting: 33863
+  main: Heilo
+- player: Schuch
+  server: Dunemaul
+  starting: 18048
+  main: Heilo
+
+- player: Kayzersoze
+  server: Boulderfist
+  starting: 98025
+  main: Kayzersoze
+- player: Kordeadun
+  server: Maiev
+  starting: 809
+  main: Korfearon
+- player: Morgainn
+  server: Sargeras
+  starting: 32920
+  main: Morganna
+
+- player: Pyralisis
+  server: Bloodscalp
+  starting: 4726
+  main: Pyralisis
+- player: Freeski
+  server: Boulderfist
+  starting: 2355
+  main: Skifree
+- player: Halonos
+  server: Boulderfist
+  starting: 8550
+  main: Skifree
+- player: Historian
+  server: Boulderfist
+  starting: 7285
+  main: Skifree
+- player: Spicyice
+  server: Stonemaul
+  starting: 6569
+  main: Undercvrgnome
 - player: Tresane
   server: Boulderfist
   starting: 35824
@@ -34,11 +125,44 @@
   server: Boulderfist
   starting: 41325
   main: Tresane
-- player: Flarez
+- player: Varos
   server: Boulderfist
-  starting: 176952
-  main: Flarez
-- player: Spicyice
-  server: Stonemaul
-  starting: 6569
-  main: Undercvrgnome
+  starting: 101821
+  main: Varos
+- player: Ventso
+  server: Boulderfist
+  starting: 58236
+  main: Ventso
+- player: Ventsy
+  server: Boulderfist
+  starting: 10512
+  main: Ventso
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
