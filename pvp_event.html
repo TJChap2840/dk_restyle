@@ -4,56 +4,72 @@ title: PvP Event
 ---
 
 <script type="text/javascript">
-  // $(document).ready(
-  // function(){
-  //   var contestants = [];
-  //   var players = [];
-  //   {% for player in site.data.pvp_event %}
-  //       var name = "{{player.player}}";
-  //       var starting = "{{player.starting}}"
-  //       var json = '{player: "' + name + '",';
-  //       json += 'starting: "' + starting + '",';
-  //       json += "characters: [";
-  //       var delimiter = "{";
-  //       {% for character in player.characters %}
-  //         var character_name = "{{character.name}}";
-  //         var character_server = "{{character.server}}";
-  //         json += delimiter + 'name: "' + character_name + '",';
-  //         json += 'server: "' + character_server + '"}';
-  //         delimiter = ",{";
-  //       {% endfor %}
-  //       json += "]}";
-  //       // console.log(json);
-  //       contestants.push(JSON.parse(json));
-  //   {% endfor %}
+  $(document).ready(
+  function() {
+    var contestants = [];
+    var players = [];
+    {% for player in site.data.pvp_event %}
+      var name = "{{player.player}}";
+      var starting = "{{player.starting}}";
+      var server = "{{player.server}}";
+      var main = "{{player.main}}";
+      // var json = '{name:' + name + ',';
+      // json += 'starting:' + starting + ',';
+      // json += 'server:' + server + ',';
+      // json += 'main:' + main + '"}';
+      // console.log(json);
+      contestants.push({name: name, starting: starting, server: server, main: main});
+    {% endfor %}
 
-  //   for (var i = 0; i < contestants.length; i++) {
-  //     var name = contestants[i].name;
-  //     var server = contestants[i].server;
-  //     var url = "https://us.api.battle.net/wow/character/" + server + "/" + name  + "?fields=pvp&locale=en_US&apikey=3tgfhwvjya9h9kpekjdyz45q3uhj2978";
-  //     var data = $.parseJSON($.ajax({
-  //       url: url,
-  //       dataType: 'json',
-  //       async: false
-  //     }).responseText);
-  //     var weekend_kills = data.totalHonorableKills - contestants[i].starting;
-  //     players.push({name: data.name, kills: weekend_kills});
-  //   }
+    for (var i = 0; i < contestants.length; i++) {
+      // console.log(contestants[i]);
+      var name = contestants[i].name;
+      var server = contestants[i].server;
+      var main = contestants[i].main;
+      // console.log(name);
+      var url = "https://us.api.battle.net/wow/character/" + server + "/" + name  + "?fields=pvp&locale=en_US&apikey=3tgfhwvjya9h9kpekjdyz45q3uhj2978";
+      var data = $.parseJSON($.ajax({
+        url: url,
+        dataType: 'json',
+        async: false
+      }).responseText);
+      var weekend_kills = data.totalHonorableKills - parseInt(contestants[i].starting);
+      // console.log(players[]);
+      // players.push({name: main, kills: weekend_kills});
+      var found = 0;
+      for (var player in players) {
+        var playerName = players[player].name;
+        var playerKills = players[player].kills;
+        // console.log(main + " " + players[player].name);
+        if (players[player].name == main) {
+          console.log("Found Match: " + playerName + " " + main);
+          console.log("Kills: " + playerKills); 
+          found = 1;
+          playerKills = playerKills + weekend_kills;
+          players[player].kills = playerKills;
+          // console.log(players[name]);
+        }
+      }
 
-  //   var sortable = [];
-  //   for (var player in players) {
-  //     sortable.push([players[player].name, players[player].kills]);
-  //   }
-  //   sortable.sort(function(a, b) {return b[1] - a[1]});
-  //   var innerHTML;
-  //   for (var i = 0; i < sortable.length; i++) {
-  //     var playerName = sortable[i][0];
-  //     var playerHK = sortable[i][1];
-  //     innerHTML += "<tr><td>" + (i+1) + "</td><td style='min-width: 400px;'>" + playerName + "</td><td>" + playerHK + "</td></tr>";
-  //   }
-  //   console.log(innerHTML);
-  //   $("#leaderboard").html(innerHTML);
-  // });
+      if (found == 0) {
+        players.push({name: main, kills: weekend_kills});
+      }
+    }
+
+    var sortable = [];
+    for (var player in players) {
+      sortable.push([players[player].name, players[player].kills]);
+    }
+    sortable.sort(function(a, b) {return b[1] - a[1]});
+    var innerHTML;
+    for (var i = 0; i < sortable.length; i++) {
+      var playerName = sortable[i][0];
+      var playerHK = sortable[i][1];
+      innerHTML += "<tr><td>" + (i+1) + "</td><td style='min-width: 400px;'>" + playerName + "</td><td>" + playerHK + "</td></tr>";
+    }
+    // console.log(innerHTML);
+    $("#leaderboard").html(innerHTML);
+  });
 </script>
 
 <div class="row">

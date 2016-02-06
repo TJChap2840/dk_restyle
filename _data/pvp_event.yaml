@@ -1,28 +1,44 @@
 - player: Bigchap
-  starting: 1000
-  characters:
-    - name: Bigchap
-      server: Boulderfist
-    - name: Brisp
-      server: Boulderfist
+  server: Boulderfist
+  starting: 1883
+  main: Bigchap
+- player: Brisp
+  server: Boulderfist
+  starting: 5679
+  main: Bigchap
+- player: Brasp
+  server: Boulderfist
+  starting: 1883
+  main: Bigchap
 - player: Evgenimalkin
-  starting: 100000
-  characters:
-    - name: Evgenimalkin
-      server: Boulderfist
-    - name: Marshboa
-      server: Boulderfist
+  server: Boulderfist
+  starting: 121186
+  main: Evgenimalkin
+- player: Marshboa
+  server: Boulderfist
+  starting: 136101
+  main: Evgenimalkin
+- player: Blakelively
+  server: Boulderfist
+  starting: 12502
+  main: Evgenimalkin
 - player: Tresane
-  starting: 1
-  characters:
-    - name: Tresane
-      server: Boulderfist
-    - name: Anziel
-      server: Boulderfist
-    - name: Admei
-      server: Boulderfist
-- player: Varos
-  starting: 0
-  characters:
-    - name: Varos
-      server: Boulderfist
+  server: Boulderfist
+  starting: 35824
+  main: Tresane
+- player: Admei
+  server: Boulderfist
+  starting: 481
+  main: Tresane
+- player: Anziel
+  server: Boulderfist
+  starting: 41325
+  main: Tresane
+- player: Flarez
+  server: Boulderfist
+  starting: 176952
+  main: Flarez
+- player: Spicyice
+  server: Stonemaul
+  starting: 6569
+  main: Undercvrgnome
