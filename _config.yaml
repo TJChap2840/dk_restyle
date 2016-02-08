@@ -6,7 +6,6 @@ paginate: 2
 
 permalink: pretty
 
-markdown: rdiscount
 highlighter: pygments
 
 resource_list:
