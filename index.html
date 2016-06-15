@@ -11,8 +11,10 @@ title: Home
   <div>
     {% for post in paginator.posts %}
       <div class="post">
-        <div class="row">
-          <h4 class="ten columns"><a href="{{post.url}}" class="index-title">{{ post.title }}</a></h4>
+        <div class="row post-header">
+          <h4 class="ten columns">
+            <a href="{{post.url}}" class="index-title">{{ post.title }}</a>
+          </h4>
           <time class="two columns" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
         </div>
         <!-- <p class="post-date">{{ post.date | date_to_string }}</p> -->
@@ -20,13 +22,14 @@ title: Home
           {% if post.content contains "<!-- more -->" %}
             {{ post.content | split:"<!-- more -->" | first % }}
           {% else %}
-            {{ post.content | truncatewords:100 }}
+            {{ post.content | truncatewords:150 }}
           {% endif %}
+          <div class="row">
+              <div class="u-pull-right">
+                <a href="{{post.url}}">read more..</a>
+              </div>
+          </div>
         </div>
-        <div style="text-align: right;">
-          <a href="{{post.url}}">read more..</a>
-        </div>
-        </br>
       </div>
     {% endfor %}
   </div>

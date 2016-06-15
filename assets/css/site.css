@@ -12,10 +12,10 @@ a {
 
 /* Baseline Grid
 ---------------------------------------- */
-h1 { font-size: 4.9rem; line-height: 49px; margin-bottom: 14px; }
-h2 { font-size: 4.2rem; line-height: 42px; margin-bottom: 7px; } 
-h3 { font-size: 3.5rem; line-height: 35px; margin-bottom: 7px; }
-h4 { font-size: 2.8rem; line-height: 28px; margin-bottom: 7px; }
+h1 { font-size: 4.9rem; line-height: 49px; margin-bottom: 14px; margin-top: 7px;}
+h2 { font-size: 4.2rem; line-height: 42px; margin-bottom: 7px; margin-top:  7px;}
+h3 { font-size: 3.5rem; line-height: 35px; margin-bottom: 7px; margin-top:  7px;}
+h4 { font-size: 2.8rem; line-height: 28px; margin-bottom: 7px; margin-top:  7px;}
 h5 { font-size: 2.1rem; margin-bottom: 0px;}
 h6 { margin-bottom: 0px;}
 
@@ -171,6 +171,31 @@ nav.primary ul li:hover > a {
   color: #C19C4D; 
   margin-bottom: 0px;
   text-align: right; 
+}
+
+/* Table
+---------------------------------------- */
+.raid-team {
+  margin-left: auto;
+  margin-right: auto;
+}
+.raid-team th:first-child,
+.raid-team td:first-child {
+  padding-left: 14px;
+}
+
+.raid-team th:last-child,
+.raid-team td:last-child {
+  padding-right: 14px;
+}
+
+/* Calendar
+---------------------------------------- */
+.fc-right button {
+  line-height: 0px;
+}
+.fc-head table {
+  margin-bottom: 0rem
 }
 
 /* Footer

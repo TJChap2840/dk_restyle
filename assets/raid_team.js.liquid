@@ -6,18 +6,15 @@ function getToon(obj) {
         raiders.push("{{ raiders.name }}");
     {% endfor %}
     for (var index = 0; index < raiders.length; index++) {
+        var id = raiders[index];
+        document.getElementById("name" + id).innerHTML = id;
         for (var yndex = 0; yndex < obj.members.length; yndex++) {
             if (raiders[index] == obj.members[yndex].character.name) {
-                var id = raiders[index];
                 document.getElementById("avatar" + id).src = "https://us.battle.net/static-render/us/" + obj.members[yndex].character.thumbnail;
 
-                if (id == "Tresane") {
-                    document.getElementById("name" + id).innerHTML = id + " (best resto NA)" ;
-                } else {
-                    document.getElementById("name" + id).innerHTML = id;
-                }
                 document.getElementById("specClass" + id).innerHTML = obj.members[yndex].character.spec.name + " ";
-                document.getElementById("armory" + id).href = "http://us.battle.net/wow/en/character/" + obj.members[yndex].character.realm + "/" + id + "/simple";
+                document.getElementById("armory" + id).href = 
+                "https://us.api.battle.net/wow/character/" + obj.members[yndex].character.realm + "/" + id + "?locale=en_US&apikey=3tgfhwvjya9h9kpekjdyz45q3uhj2978";
 
                 if (obj.members[yndex].character.class == "1") { document.getElementById("specClass" + id).innerHTML += "Warrior"; }
                 if (obj.members[yndex].character.class == "2") { document.getElementById("specClass" + id).innerHTML += "Paladin"; }
@@ -35,6 +32,6 @@ function getToon(obj) {
     }
 }
 window.onload = function() {
-    var url = "http://us.battle.net/api/wow/guild/Boulderfist/Dragon%20Knight?fields=members&jsonp=getToon";
+    var url = "https://us.api.battle.net/wow/guild/Boulderfist/Dragon%20Knight?fields=members&locale=en_US&apikey=3tgfhwvjya9h9kpekjdyz45q3uhj2978&jsonp=getToon";
     document.getElementById("myjsonp").src = url;
 }

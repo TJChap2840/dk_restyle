@@ -2,6 +2,8 @@ name: "Dragon Knight"
 description: "Dragon Knight on Boulderfist"
 url: http://dk.chapley.com
 
+gems: [jekyll-paginate, jekyll-gist]
+
 paginate: 3
 
 permalink: pretty
@@ -11,3 +13,5 @@ highlighter: pygments
 resource_list:
   How Bad Am I?: '/log_guide/'
   Learn Your Class: '/learn_your_class/'
+  
+

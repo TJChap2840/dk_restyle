@@ -1,0 +1,46 @@
+
+  <div class="band footer">
+    <footer class="container">
+      <div class="row">
+        <div class="one-third column mmoc">
+          <h6>MMO Champion</h6>
+          {% for i in (1..5) %}
+            <li><a id="mmo{{ i }}"></a></li>
+          {% endfor %}
+        </div>
+        <div class="one-third column wclogs">
+          <h6>Warcraft Logs</h6>
+          {% for i in (1..5) %}
+            <a id="link{{ i }}">
+              <div class="row">
+                <b class="one-half column" id="title{{ i }}"></b>
+                <div class="one-half column" id="kills{{ i }}" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day{{ i }}"></div>
+                <div class="one-half column" id="wipes{{ i }}" style="text-align: right;"></div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+        <div class="one-third column streamers">
+          <h6>Streamers</h6>
+            {% for streamer in sorted_streamers %}
+            <a id="{{ streamer.name }}">
+              <div class="row">
+                <b class="one-half column">{{ streamer.name }}</b>
+                <div class="one-half column" id="{{ streamer.name }}Status" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="{{ streamer.name }}Title"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="{{ streamer.name }}Game"></div>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
