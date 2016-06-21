@@ -97,12 +97,28 @@ nav.primary ul li a:hover {
 	color: #FFF;
 }
 
+.sidebar div h6 {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sidebar div li {
+    display: inline-block;
+    max-width: 100%;
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #E9E9EB;
+}
+
 .content .button {
     height: 28px;
     line-height: 28px;
     border: none;
     color: #1D2C49;
-	margin-left: -15px;
+	/*margin-left: -15px;*/
+    border-radius: 0px;
 }
 
 .mmoc li {
@@ -157,4 +173,33 @@ nav.primary ul li a:hover {
     font-size: 18px;
     margin-bottom: 10px;
 	font-weight: 500;
+}
+
+/*
+firstly we deal with the container element
+making it relatively positioned
+and defining its height proportionally
+to its width - giving us a 16:9 ratio
+*/
+.embed {
+    position: relative;
+    padding: 0;
+    padding-bottom: 56.25%; /* 16:9 ratio*/
+    height: 0;
+    overflow: hidden;
+}
+ 
+/*
+then we make the actual embedded content 
+behave in terms of its dimensions
+and its position within the container
+*/
+.embed iframe,
+.embed object,
+.embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

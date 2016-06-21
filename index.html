@@ -8,42 +8,67 @@ title: Home
   </a>
 </div>-->
 <div class="row">
-  <div>
-    {% for post in paginator.posts %}
-      <div class="post">
-        <div class="row post-header">
-          <h4 class="ten columns">
-            <a href="{{post.url}}" class="index-title">{{ post.title }}</a>
-          </h4>
-          <time class="two columns" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
-        </div>
-        <!-- <p class="post-date">{{ post.date | date_to_string }}</p> -->
-        <div class="post-content-truncate">
-          {% if post.content contains "<!-- more -->" %}
-            {{ post.content | split:"<!-- more -->" | first % }}
-          {% else %}
-            {{ post.content | truncatewords:150 }}
-          {% endif %}
-          <div class="row">
-              <div class="u-pull-right">
-                <a href="{{post.url}}">read more..</a>
-              </div>
+  <div class="eight columns">
+    <div>
+      {% for post in paginator.posts %}
+        <div class="post">
+          <div class="row post-header">
+            <h4 class="ten columns">
+              <a href="{{post.url}}" class="index-title">{{ post.title }}</a>
+            </h4>
+            <time class="two columns" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+          </div>
+          <!-- <p class="post-date">{{ post.date | date_to_string }}</p> -->
+          <div class="post-content-truncate">
+            {% if post.content contains "<!-- more -->" %}
+              {{ post.content | split:"<!-- more -->" | first % }}
+            {% else %}
+              {{ post.content | truncatewords:150 }}
+            {% endif %}
+            <div class="row">
+                <div class="u-pull-right">
+                  <a href="{{post.url}}">read more..</a>
+                </div>
+            </div>
           </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
+    <div>
+    {% if paginator.next_page %}
+      <a class="button" href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="col-md-6 btn btn-default" role="button"><i class="fa fa-angle-double-left fa-fw"></i>Older</a>
+    {% else %}
+      <a class="button diabled" href="{{ paginator.next_page_path | prepend: site.baseurl }}" role="button"><i class="fa fa-angle-double-left fa-fw"></i>Older</a>
+    {% endif %}
+    
+    {% if paginator.previous_page %}
+      <a class="button u-pull-right" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" role="button">Newer<i class="fa fa-angle-double-right fa-fw"></i></a>
+    {% else %}
+      <a class="button u-pull-right disabled" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" role="button">Newer<i class="fa fa-angle-double-right fa-fw"></i></a>
+    {% endif %}
+    </div>
   </div>
-  <div>
-  {% if paginator.next_page %}
-    <a class="button" href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="col-md-6 btn btn-default" role="button"><i class="fa fa-angle-double-left fa-fw"></i>Older</a>
-  {% else %}
-    <a class="button diabled" href="{{ paginator.next_page_path | prepend: site.baseurl }}" role="button"><i class="fa fa-angle-double-left fa-fw"></i>Older</a>
-  {% endif %}
-  
-  {% if paginator.previous_page %}
-    <a class="button u-pull-right" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" role="button">Newer<i class="fa fa-angle-double-right fa-fw"></i></a>
-  {% else %}
-    <a class="button u-pull-right disabled" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" role="button">Newer<i class="fa fa-angle-double-right fa-fw"></i></a>
-  {% endif %}
+  <div class="four columns">
+    <div class="post sidebar">
+      <div class="row post-header">
+        <h6>Events</h6>
+      </div>
+      <div style="padding-top:20px;">
+        <li><a href="/running_hs">June Hearthstone Tournament Bracket</a></li>
+        <li><a href="/next_hs">July Hearthstone Tournament Open for Registration</a></li>
+        
+      </div>
+    </div>
+    <div class="post sidebar">
+      <div class="row post-header">
+        <h6>Discord</h6>
+      </div>
+      <div class="embed" style="height: 300px">
+        <iframe style="padding-top:20px;" src="http://discordi.deliriousdrunkards.com/render?id=161858052041998336&theme=dark&join=false&abc=true&showall=true&toggle=false&shownick=true" width="300px" height="400px" frameborder="0"></iframe>
+      </div>
+      <div class="row">
+        <a class="button button-primary u-full-width" href="http://discord.me/dragon_knight">Join Server</a>
+      </div>
+    </div>
   </div>
 </div>

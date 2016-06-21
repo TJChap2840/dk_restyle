@@ -8,9 +8,16 @@ title: Calendar
 $(document).ready(function() {
     $('#calendar').fullCalendar({
         googleCalendarApiKey: 'AIzaSyBK7sAkF4XuftwyD8HtllVZm6Iv7825hbU',
-        events: {
-            googleCalendarId: 'dkboulderfist@gmail.com'
-        }
+        eventSources: [
+          {
+              googleCalendarId: 'dkboulderfist@gmail.com',
+              color: 'blue'
+          },
+          {
+            googleCalendarId: 'o0iuhh0v3jl3t5fj7e58cumblo@group.calendar.google.com',
+            color: 'green'
+          }
+        ]
     });
 });
 
