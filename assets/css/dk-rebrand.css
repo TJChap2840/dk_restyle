@@ -97,19 +97,20 @@ nav.primary ul li a:hover {
 	color: #FFF;
 }
 
-.sidebar div h6 {
+.sidebar h6 {
     color: #FFF;
     font-size: 18px;
     font-weight: 500;
 }
 
 .sidebar div li {
-    display: inline-block;
+    /*display: inline-block;*/
     max-width: 100%;
     /*white-space: nowrap;*/
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
     color: #E9E9EB;
+    list-style-type: none;
 }
 
 .content .button {

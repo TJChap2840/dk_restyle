@@ -14,8 +14,8 @@ function getToon(obj) {
 
                 document.getElementById("specClass" + id).innerHTML = obj.members[yndex].character.spec.name + " ";
                 document.getElementById("armory" + id).href = 
-                "https://us.api.battle.net/wow/character/" + obj.members[yndex].character.realm + "/" + id + "?locale=en_US&apikey=3tgfhwvjya9h9kpekjdyz45q3uhj2978";
-
+                "http://us.battle.net/wow/en/character/" + obj.members[yndex].character.realm + "/" + id + "/simple";
+                
                 if (obj.members[yndex].character.class == "1") { document.getElementById("specClass" + id).innerHTML += "Warrior"; }
                 if (obj.members[yndex].character.class == "2") { document.getElementById("specClass" + id).innerHTML += "Paladin"; }
                 if (obj.members[yndex].character.class == "3") { document.getElementById("specClass" + id).innerHTML += "Hunter"; }
