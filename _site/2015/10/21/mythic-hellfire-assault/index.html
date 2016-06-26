@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Mythic Hellfire Assault Down</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/dk-rebrand.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.3/fullcalendar.min.css">
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.3/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="/assets/gcal.js"></script>
+    <script type="text/javascript" src="/assets/footer.js"></script>
+
+</head>
+<body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65566204-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+  <script type="text/javascript">
+    $(function(){
+      mmocNews();
+      wclogs();
+      
+      checkTwitch("Tresane", "https://api.twitch.tv/kraken/streams/flux9"); 
+      
+      checkTwitch("Bigchap", "https://api.twitch.tv/kraken/streams/brisp"); 
+      
+      checkTwitch("Cptkrunk", "https://api.twitch.tv/kraken/streams/sotpos"); 
+      
+      checkTwitch("Damitus", "https://api.twitch.tv/kraken/streams/damituswow"); 
+      
+    });
+  </script>
+  <!-- <nav class="navbar navbar-inverse navbar-static-top">
+<div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Dragon Knight</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" roles="botton" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+            <li><a href="/log_guide/">How Bad Am I?</a></li>
+          
+            <li><a href="/learn_your_class/">Learn Your Class</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right nav-pills">
+      <li> 
+        <a href="https://www.youtube.com/channel/UC8BXVlTC8SiL3Y_NIXQpnzg" class="btn btn-social-icon btn-youtube">
+          <i class="fa fa-youtube-square">&nbsp; Youtube</i>
+        </a>
+      </li>
+      <li> 
+        <a href="https://github.com/TJChap2840/dragonknight" class="btn btn-social-icon btn-github">
+          <i class="fa fa-github-square">&nbsp; GitHub</i>
+        </a>
+      </li>
+    </ul>
+</nav>
+
+<nav class="container primary">
+    <a class="brand three columns" href="/">Dragon Knight</a>
+    <ul class="nine columns" style="list-style-type: none; padding: 0">
+      <li><a href="/">About</a></li>
+      <li><a href="/">Raid Team</a></li>
+      <li><a href="/">Calendar</a></li>
+    </ul>
+  </nav> -->
+
+<div class="band header">
+  <header class="container main">
+    <h1 class="logo"><a href="/">Dragon Knight</a></h1>
+  </header>
+</div>
+<div class="band navigation">
+  <nav class="container primary">
+    <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/raid_team/">Raid Team</a></li>
+      <li><a href="/calendar/">Calendar</a></li>
+      <!-- <li><a href="#">Resources</a>
+        <ul>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Best in Slot</a></li>
+        </ul>
+      </li> -->
+    </ul>
+  </nav>
+</div>
+  </div>
+  <div class="band content">
+    <div class="container">
+      <div class="row">
+  <div class="two columns"></div>
+  <div class="ten columns u-pull-right post" style="background-color:#1d2c49;">
+    <h4>Mythic Hellfire Assault Down</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="two columns" style="padding-top: 20px;">
+    <p class="post-date">
+       21 October
+    </p>
+    <p class="post-date">
+      2015
+    </p>
+  </div>
+  <div class="ten columns post">
+    <h5>Great Job!</h5>
+<p>We down Hellfire Assault on Mythic difficulty in one night of attempts. Let’s keep up the good work and get Iron Reaver down the next time we make our attempts.</p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <a class="gif" href="http://i.imgur.com/iEtilz4.jpg"><img class="gif embed-responsive-item" src="http://i.imgur.com/iEtilz4.jpg" /></a>
+</div>
+
+
+  </div>
+  <div class="ten columns u-pull-right">
+      
+        <a class="button" href="/2015/10/20/end-of-the-expac/"><i class="fa fa-angle-double-left fa-fw"></i>Older Post</a>
+      
+      
+        <a class="button u-pull-right" href="/2015/10/23/valor-is-back/">Newer Post<i class="fa fa-angle-double-right fa-fw"></i></a>
+      
+    </div>
+</div>
+
+
+
+    </div>
+  </div>
+  
+  <div class="band footer">
+    <footer class="container">
+      <div class="row">
+        <div class="one-third column mmoc">
+          <h6>MMO Champion</h6>
+          
+            <li><a id="mmo1"></a></li>
+          
+            <li><a id="mmo2"></a></li>
+          
+            <li><a id="mmo3"></a></li>
+          
+            <li><a id="mmo4"></a></li>
+          
+            <li><a id="mmo5"></a></li>
+          
+        </div>
+        <div class="one-third column wclogs">
+          <h6>Warcraft Logs</h6>
+          
+            <a id="link1">
+              <div class="row">
+                <b class="one-half column" id="title1"></b>
+                <div class="one-half column" id="kills1" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day1"></div>
+                <div class="one-half column" id="wipes1" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link2">
+              <div class="row">
+                <b class="one-half column" id="title2"></b>
+                <div class="one-half column" id="kills2" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day2"></div>
+                <div class="one-half column" id="wipes2" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link3">
+              <div class="row">
+                <b class="one-half column" id="title3"></b>
+                <div class="one-half column" id="kills3" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day3"></div>
+                <div class="one-half column" id="wipes3" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link4">
+              <div class="row">
+                <b class="one-half column" id="title4"></b>
+                <div class="one-half column" id="kills4" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day4"></div>
+                <div class="one-half column" id="wipes4" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link5">
+              <div class="row">
+                <b class="one-half column" id="title5"></b>
+                <div class="one-half column" id="kills5" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day5"></div>
+                <div class="one-half column" id="wipes5" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+        </div>
+        <div class="one-third column streamers">
+          <h6>Streamers</h6>
+            
+            <a id="Bigchap">
+              <div class="row">
+                <b class="one-half column">Bigchap</b>
+                <div class="one-half column" id="BigchapStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="BigchapTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="BigchapGame"></div>
+              </div>
+            </a>
+            
+            <a id="Cptkrunk">
+              <div class="row">
+                <b class="one-half column">Cptkrunk</b>
+                <div class="one-half column" id="CptkrunkStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="CptkrunkTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="CptkrunkGame"></div>
+              </div>
+            </a>
+            
+            <a id="Damitus">
+              <div class="row">
+                <b class="one-half column">Damitus</b>
+                <div class="one-half column" id="DamitusStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="DamitusTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="DamitusGame"></div>
+              </div>
+            </a>
+            
+            <a id="Tresane">
+              <div class="row">
+                <b class="one-half column">Tresane</b>
+                <div class="one-half column" id="TresaneStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="TresaneTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="TresaneGame"></div>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+body {
+    background-color: #E9E9E9;
+}
+
+/**** Uncomment for alternate header ****/
+h1 {
+    font-size: 4.9rem;
+    line-height: 49px;
+    margin-bottom: 8px;
+/* 	text-align: right; */
+}
+
+.band.header {
+    background-color: #1D2C49;
+}
+
+header.main {
+    padding: 7px 0;
+/*     float: left;
+    margin-left: -170px; */
+}
+
+/* nav.container.primary {
+    padding-top: 10px;
+    padding-left: 765px;
+} */
+
+/****---------------------------------------****/
+
+.navigation {
+    background-color: #1d2c49;
+    border-top: solid 1px #C19C4D;
+}
+
+nav.primary ul li a {
+    display: inline-block;
+    line-height: 49px;
+    color: #C19C4D;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    padding: 0 14px;
+}
+
+nav.primary ul li a:hover {
+    background-color: #C19C4D;
+    color: #1D2C49;
+}
+
+.post {
+    color: #1D2C49;
+    background-color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(112,112,112,1);
+    box-shadow: 0px 1px 3px 0px rgba(112,112,112,1);
+	padding: 10px;
+}
+
+.post .post-header {
+    background-color: #1D2C49;
+    border-bottom: solid 2px #C19C4D;
+    /*padding: 15px 5px 5px 15px;*/
+	margin: -10px;
+    padding: 10px;
+}
+
+.post time {
+    color: #C19C4D;
+    margin: 5px;
+    text-align: right;
+}
+
+.post h4 > a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.post h4 > a:hover {
+    color:#C19C4D ;
+    text-decoration: none;
+}
+
+.post-content-truncate {
+	/*Override read more link being aligned right inline*/
+    text-align: left !important;
+	padding-top: 20px;
+}
+
+.post div a {
+	color: #C19C4D;
+}
+
+.post div h4 a {
+	color: #FFF;
+}
+
+.sidebar h6 {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sidebar div li {
+    /*display: inline-block;*/
+    max-width: 100%;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    color: #E9E9EB;
+    list-style-type: none;
+}
+
+.content .button {
+    height: 28px;
+    line-height: 28px;
+    border: none;
+    color: #1D2C49;
+	/*margin-left: -15px;*/
+    border-radius: 0px;
+}
+
+.mmoc li {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #E9E9EB;
+}
+
+.mmoc li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #C19C4D;
+}
+
+.streamers a {
+    color: #E9E9E9;
+}
+
+.streamers b {
+    color: #C19C4D;
+}
+
+.streamers .row {
+    line-height: 30px;
+}
+
+.wclogs a {
+    font-size: 12px;
+    color: #E9E9EB;
+}
+
+.wclogs b {
+    color: #C19C4D;
+}
+
+.footer {
+    background-color: #1d2c49;
+    border-top: solid 1px #C19C4D;
+    position: relative;
+    margin-top: -190px;
+    clear: both;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 12px;
+}
+
+.footer h6 {
+    color: #E9E9E9;
+    font-size: 18px;
+    margin-bottom: 10px;
+	font-weight: 500;
+}
+
+/*
+firstly we deal with the container element
+making it relatively positioned
+and defining its height proportionally
+to its width - giving us a 16:9 ratio
+*/
+.embed {
+    position: relative;
+    padding: 0;
+    padding-bottom: 56.25%; /* 16:9 ratio*/
+    height: 0;
+    overflow: hidden;
+}
+ 
+/*
+then we make the actual embedded content 
+behave in terms of its dimensions
+and its position within the container
+*/
+.embed iframe,
+.embed object,
+.embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

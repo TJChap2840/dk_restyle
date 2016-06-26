@@ -1,0 +1,93 @@
+function getToon(obj) {
+    var raiders = [];
+    
+        raiders.push("Alkrym");
+    
+        raiders.push("Bigchap");
+    
+        raiders.push("Burstlimit");
+    
+        raiders.push("Cptkrunk");
+    
+        raiders.push("Crians");
+    
+        raiders.push("Damitus");
+    
+        raiders.push("Dragonheart");
+    
+        raiders.push("Enide");
+    
+        raiders.push("Evgenimalkin");
+    
+        raiders.push("Felene");
+    
+        raiders.push("Flarez");
+    
+        raiders.push("Ghains");
+    
+        raiders.push("Hanzaki");
+    
+        raiders.push("Illusia");
+    
+        raiders.push("Jackshephard");
+    
+        raiders.push("Juliustice");
+    
+        raiders.push("Keenyy");
+    
+        raiders.push("Korfearon");
+    
+        raiders.push("Looniebinnzz");
+    
+        raiders.push("Mistytide");
+    
+        raiders.push("Saleighn");
+    
+        raiders.push("Shiftless");
+    
+        raiders.push("Skifree");
+    
+        raiders.push("Solarmage");
+    
+        raiders.push("Tresane");
+    
+        raiders.push("Undrcvrgnome");
+    
+        raiders.push("Varos");
+    
+        raiders.push("Ventso");
+    
+        raiders.push("Vertueux");
+    
+        raiders.push("Wootman");
+    
+    for (var index = 0; index < raiders.length; index++) {
+        var id = raiders[index];
+        document.getElementById("name" + id).innerHTML = id;
+        for (var yndex = 0; yndex < obj.members.length; yndex++) {
+            if (raiders[index] == obj.members[yndex].character.name) {
+                document.getElementById("avatar" + id).src = "https://us.battle.net/static-render/us/" + obj.members[yndex].character.thumbnail;
+
+                document.getElementById("specClass" + id).innerHTML = obj.members[yndex].character.spec.name + " ";
+                document.getElementById("armory" + id).href = 
+                "http://us.battle.net/wow/en/character/" + obj.members[yndex].character.realm + "/" + id + "/simple";
+                
+                if (obj.members[yndex].character.class == "1") { document.getElementById("specClass" + id).innerHTML += "Warrior"; }
+                if (obj.members[yndex].character.class == "2") { document.getElementById("specClass" + id).innerHTML += "Paladin"; }
+                if (obj.members[yndex].character.class == "3") { document.getElementById("specClass" + id).innerHTML += "Hunter"; }
+                if (obj.members[yndex].character.class == "4") { document.getElementById("specClass" + id).innerHTML += "Rogue"; }
+                if (obj.members[yndex].character.class == "5") { document.getElementById("specClass" + id).innerHTML += "Priest"; }
+                if (obj.members[yndex].character.class == "6") { document.getElementById("specClass" + id).innerHTML += "Death Knight"; }
+                if (obj.members[yndex].character.class == "7") { document.getElementById("specClass" + id).innerHTML += "Shaman"; }
+                if (obj.members[yndex].character.class == "8") { document.getElementById("specClass" + id).innerHTML += "Mage"; }
+                if (obj.members[yndex].character.class == "9") { document.getElementById("specClass" + id).innerHTML += "Warlock"; }
+                if (obj.members[yndex].character.class == "10") { document.getElementById("specClass" + id).innerHTML += "Monk"; }
+                if (obj.members[yndex].character.class == "11") { document.getElementById("specClass" + id).innerHTML += "Druid"; }
+            }
+        }
+    }
+}
+window.onload = function() {
+    var url = "https://us.api.battle.net/wow/guild/Boulderfist/Dragon%20Knight?fields=members&locale=en_US&apikey=3tgfhwvjya9h9kpekjdyz45q3uhj2978&jsonp=getToon";
+    document.getElementById("myjsonp").src = url;
+}

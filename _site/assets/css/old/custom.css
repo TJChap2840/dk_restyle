@@ -1,0 +1,72 @@
+.post {
+  color: rgba(255,255,255,0.4);
+}
+
+nav.primary ul
+nav.primary ul li {
+  margin: 0px;
+  /*margin-left: -25px;*/
+}
+
+nav.primary ul li {
+  display: inline-block;
+  float: left;
+  position: relative;
+}
+
+nav.primary ul li.brand {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+nav.primary ul li a {
+  display: inline-block;
+  line-height: 15px;
+  padding: 0 0;
+  color: #C19C4D;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav.primary ul li a:hover {
+  color: #A59355;
+}
+
+.brand {
+  font-size: 1.5em;
+}
+
+.post-title {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 15px;
+  color: #C19C4D;
+}
+
+time {
+  line-height: 15px; 
+  padding-top: 9px; color: rgba(255,255,255,0.1);
+}
+
+.post-date {
+  color: #C19C4D; 
+  text-align: right; 
+}
+
+.post > b {
+  color: #A59355;
+}
+
+.jumbotron {
+  margin-bottom: 10px;
+  border: 3px solid rgba(0,0,0, .7);
+  background-image: url(/assets/img/dk_pvp.jpg);
+  background-size: cover;
+  /*border-radius: 4px;*/
+  height: 300px;
+}
+
+.sidebar-header {
+  color: #C19C4D;
+}
+

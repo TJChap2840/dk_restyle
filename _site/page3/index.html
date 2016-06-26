@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/dk-rebrand.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.3/fullcalendar.min.css">
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.3/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="/assets/gcal.js"></script>
+    <script type="text/javascript" src="/assets/footer.js"></script>
+
+</head>
+<body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65566204-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+  <script type="text/javascript">
+    $(function(){
+      mmocNews();
+      wclogs();
+      
+      checkTwitch("Tresane", "https://api.twitch.tv/kraken/streams/flux9"); 
+      
+      checkTwitch("Bigchap", "https://api.twitch.tv/kraken/streams/brisp"); 
+      
+      checkTwitch("Cptkrunk", "https://api.twitch.tv/kraken/streams/sotpos"); 
+      
+      checkTwitch("Damitus", "https://api.twitch.tv/kraken/streams/damituswow"); 
+      
+    });
+  </script>
+  <!-- <nav class="navbar navbar-inverse navbar-static-top">
+<div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Dragon Knight</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" roles="botton" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+            <li><a href="/log_guide/">How Bad Am I?</a></li>
+          
+            <li><a href="/learn_your_class/">Learn Your Class</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right nav-pills">
+      <li> 
+        <a href="https://www.youtube.com/channel/UC8BXVlTC8SiL3Y_NIXQpnzg" class="btn btn-social-icon btn-youtube">
+          <i class="fa fa-youtube-square">&nbsp; Youtube</i>
+        </a>
+      </li>
+      <li> 
+        <a href="https://github.com/TJChap2840/dragonknight" class="btn btn-social-icon btn-github">
+          <i class="fa fa-github-square">&nbsp; GitHub</i>
+        </a>
+      </li>
+    </ul>
+</nav>
+
+<nav class="container primary">
+    <a class="brand three columns" href="/">Dragon Knight</a>
+    <ul class="nine columns" style="list-style-type: none; padding: 0">
+      <li><a href="/">About</a></li>
+      <li><a href="/">Raid Team</a></li>
+      <li><a href="/">Calendar</a></li>
+    </ul>
+  </nav> -->
+
+<div class="band header">
+  <header class="container main">
+    <h1 class="logo"><a href="/">Dragon Knight</a></h1>
+  </header>
+</div>
+<div class="band navigation">
+  <nav class="container primary">
+    <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/raid_team/">Raid Team</a></li>
+      <li><a href="/calendar/">Calendar</a></li>
+      <!-- <li><a href="#">Resources</a>
+        <ul>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Best in Slot</a></li>
+        </ul>
+      </li> -->
+    </ul>
+  </nav>
+</div>
+  </div>
+  <div class="band content">
+    <div class="container">
+      <!--<div class="row">
+  <a href="/pvp_event/">
+    <div class="jumbotron"></div>
+  </a>
+</div>-->
+<div class="row">
+  <div class="eight columns">
+    <div>
+      
+        <div class="post">
+          <div class="row post-header">
+            <h4 class="ten columns">
+              <a href="/2016/01/07/hearthstone-update/" class="index-title">Hearthstone Update and "Korfearon Reads"</a>
+            </h4>
+            <time class="two columns" datetime="2016-01-07T00:00:00-05:00">07 Jan 2016</time>
+          </div>
+          <!-- <p class="post-date">07 Jan 2016</p> -->
+          <div class="post-content-truncate">
+            
+              <h5>Hearthstone Update</h5> <p>The deadline to sign up for the tournament is this Saturday. Sometime on Sunday I will create the bracket and all players will be required to give me their decks and entry fee. You can see a preview of the bracket below along with a link to the information page. <br /> <a href="https://docs.google.com/spreadsheets/d/1Xg3tQcwbS8lncubp_L10jyisvtPaglmy5TAV-961fWs/edit#gid=988591516"><b>Bracket</b></a> <br/> <a href="/hearthstone/"><b>Information</b></a></p> <h5>Other events</h5> <p>My goal with this tournament is to lay the foundation for more events. The ones that immediately came to mind (due to being WoW based) were duel tournaments and pet battle tournaments. Unfortunately, these are hard to spectate and may not turn out to be very fun. The idea is to create an atmosphere in our guild where people can take part in things outside of just the normal dungeon/raid/PvP groups. I'd like to hear the ideas you guys may have. Message me through normal communication channels if you...
+            
+            <div class="row">
+                <div class="u-pull-right">
+                  <a href="/2016/01/07/hearthstone-update/">read more..</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="post">
+          <div class="row post-header">
+            <h4 class="ten columns">
+              <a href="/2015/12/22/hearthstone-tournament/" class="index-title">Hearthstone Tournament and updates</a>
+            </h4>
+            <time class="two columns" datetime="2015-12-22T00:00:00-05:00">22 Dec 2015</time>
+          </div>
+          <!-- <p class="post-date">22 Dec 2015</p> -->
+          <div class="post-content-truncate">
+            
+              <h5>Hearthstone Info</h5> I am happy to announce the start of a new guild Hearthstone tournament series. The tournament date is still TBD but will occur sometime in the middle of January. All guild members (and their friends) are encouraged to sign up. You can find more info by clicking on the Hearthstone banner at the top of the page or going to <a href="/hearthstone/">this</a> link. Contact Brisp/Bigchap if you'd like to participate. <h5>Raid Update</h5> We've made solid progress on Mythic given our limited raid schedule. We are currently 3/13 Mythic and very close to 4/13. We are always looking to add more raiders to our roster. Message one of the people on the <a href="/about/">about</a> or one of the officers in game. <h5>Various Site Additions</h5> I've also taken some time to make some more updates to the website. Most notably, I have added a stream status section to the right...
+            
+            <div class="row">
+                <div class="u-pull-right">
+                  <a href="/2015/12/22/hearthstone-tournament/">read more..</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="post">
+          <div class="row post-header">
+            <h4 class="ten columns">
+              <a href="/2015/10/23/valor-is-back/" class="index-title">Valor is Back</a>
+            </h4>
+            <time class="two columns" datetime="2015-10-23T00:00:00-04:00">23 Oct 2015</time>
+          </div>
+          <!-- <p class="post-date">23 Oct 2015</p> -->
+          <div class="post-content-truncate">
+            
+              <p>Prepare yourself for 6.2.3 if you are looking to get a maximum of 10 more ilvls out from your current gear.</p> <p>You can get up 4875 Valor per week. Which means you can give +10 ilvls to 9 of your items in one week.</p> <ul> <li>You get 300 Valor per Mythic dungeon (2400 for all 8)</li> <li>500 for the weekly Event quest (excluding Pet Battle)</li> <li>100 Valor for your first random Heroic (700 total)</li> <li>750 for completing all of HFC LFR, 300 for completing all of BRF LFR, and 225 for completing all of HM LFR</li> </ul> <p>Assuming you don’t do LFR (because fuck LFR), that will give you 3600 Valor or 6 items in one week. That’s a huge lift and will help us push through Mythic content faster.</p> <p>Also, Mythic warforged can be as high as ilvl 725.</p> <p>All of that to say that everybody should be trying...
+            
+            <div class="row">
+                <div class="u-pull-right">
+                  <a href="/2015/10/23/valor-is-back/">read more..</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+    <div>
+    
+      <a class="button" href="/page4" class="col-md-6 btn btn-default" role="button"><i class="fa fa-angle-double-left fa-fw"></i>Older</a>
+    
+    
+    
+      <a class="button u-pull-right" href="/page2" role="button">Newer<i class="fa fa-angle-double-right fa-fw"></i></a>
+    
+    </div>
+  </div>
+  <div class="four columns">
+    <div class="post sidebar">
+      <h6 class="row post-header">Events</h6>
+      <div style="padding-top:20px;">
+        <li><a href="/running_hs"><i class="fa fa-caret-right fa-fw fa-1"></i>June Hearthstone Tournament Bracket</a></li>
+        <li><a href="/next_hs"><i class="fa fa-caret-right fa-fw fa-1"></i>July Hearthstone Tournament Open for Registration</a></li>
+      </div>
+    </div>
+    <div class="post sidebar">
+      <h6 class="row post-header">Discord</h6>
+      <div class="embed" style="height: 300px">
+        <iframe style="padding-top:20px;" src="http://discordi.deliriousdrunkards.com/render?id=161858052041998336&theme=dark&join=false&abc=true&showall=true&toggle=false&shownick=true" width="300px" height="400px" frameborder="0"></iframe>
+      </div>
+      <div class="row">
+        <a class="button button-primary u-full-width" href="http://discord.me/dragon_knight">Join Server</a>
+      </div>
+    </div>
+    <div class="post sidebar">
+      <h6 class="row post-header">Contatct Us</h6>
+      <div style="padding-top:20px;">
+        <li> 
+          <a href="https://www.youtube.com/channel/UC8BXVlTC8SiL3Y_NIXQpnzg" class="btn btn-social-icon btn-youtube">
+            <i class="fa fa-youtube-square">&nbsp; Youtube</i>
+          </a>
+        </li>
+        <li> 
+          <a href="https://github.com/TJChap2840/dragonknight" class="btn btn-social-icon btn-github">
+            <i class="fa fa-github-square">&nbsp; GitHub</i>
+          </a>
+        </li>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  
+  <div class="band footer">
+    <footer class="container">
+      <div class="row">
+        <div class="one-third column mmoc">
+          <h6>MMO Champion</h6>
+          
+            <li><a id="mmo1"></a></li>
+          
+            <li><a id="mmo2"></a></li>
+          
+            <li><a id="mmo3"></a></li>
+          
+            <li><a id="mmo4"></a></li>
+          
+            <li><a id="mmo5"></a></li>
+          
+        </div>
+        <div class="one-third column wclogs">
+          <h6>Warcraft Logs</h6>
+          
+            <a id="link1">
+              <div class="row">
+                <b class="one-half column" id="title1"></b>
+                <div class="one-half column" id="kills1" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day1"></div>
+                <div class="one-half column" id="wipes1" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link2">
+              <div class="row">
+                <b class="one-half column" id="title2"></b>
+                <div class="one-half column" id="kills2" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day2"></div>
+                <div class="one-half column" id="wipes2" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link3">
+              <div class="row">
+                <b class="one-half column" id="title3"></b>
+                <div class="one-half column" id="kills3" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day3"></div>
+                <div class="one-half column" id="wipes3" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link4">
+              <div class="row">
+                <b class="one-half column" id="title4"></b>
+                <div class="one-half column" id="kills4" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day4"></div>
+                <div class="one-half column" id="wipes4" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link5">
+              <div class="row">
+                <b class="one-half column" id="title5"></b>
+                <div class="one-half column" id="kills5" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day5"></div>
+                <div class="one-half column" id="wipes5" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+        </div>
+        <div class="one-third column streamers">
+          <h6>Streamers</h6>
+            
+            <a id="Bigchap">
+              <div class="row">
+                <b class="one-half column">Bigchap</b>
+                <div class="one-half column" id="BigchapStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="BigchapTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="BigchapGame"></div>
+              </div>
+            </a>
+            
+            <a id="Cptkrunk">
+              <div class="row">
+                <b class="one-half column">Cptkrunk</b>
+                <div class="one-half column" id="CptkrunkStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="CptkrunkTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="CptkrunkGame"></div>
+              </div>
+            </a>
+            
+            <a id="Damitus">
+              <div class="row">
+                <b class="one-half column">Damitus</b>
+                <div class="one-half column" id="DamitusStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="DamitusTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="DamitusGame"></div>
+              </div>
+            </a>
+            
+            <a id="Tresane">
+              <div class="row">
+                <b class="one-half column">Tresane</b>
+                <div class="one-half column" id="TresaneStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="TresaneTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="TresaneGame"></div>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

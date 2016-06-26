@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>PvP Event</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/dk-rebrand.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.3/fullcalendar.min.css">
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.3/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="/assets/gcal.js"></script>
+    <script type="text/javascript" src="/assets/footer.js"></script>
+
+</head>
+<body>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65566204-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  
+  <script type="text/javascript">
+    $(function(){
+      mmocNews();
+      wclogs();
+      
+      checkTwitch("Tresane", "https://api.twitch.tv/kraken/streams/flux9"); 
+      
+      checkTwitch("Bigchap", "https://api.twitch.tv/kraken/streams/brisp"); 
+      
+      checkTwitch("Cptkrunk", "https://api.twitch.tv/kraken/streams/sotpos"); 
+      
+      checkTwitch("Damitus", "https://api.twitch.tv/kraken/streams/damituswow"); 
+      
+    });
+  </script>
+  <!-- <nav class="navbar navbar-inverse navbar-static-top">
+<div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Dragon Knight</a>
+    </div>
+    <ul class="nav navbar-nav">
+      
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+        
+          
+          
+      
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" roles="botton" aria-haspopup="true" aria-expanded="false">Resources <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+            <li><a href="/log_guide/">How Bad Am I?</a></li>
+          
+            <li><a href="/learn_your_class/">Learn Your Class</a></li>
+          
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right nav-pills">
+      <li> 
+        <a href="https://www.youtube.com/channel/UC8BXVlTC8SiL3Y_NIXQpnzg" class="btn btn-social-icon btn-youtube">
+          <i class="fa fa-youtube-square">&nbsp; Youtube</i>
+        </a>
+      </li>
+      <li> 
+        <a href="https://github.com/TJChap2840/dragonknight" class="btn btn-social-icon btn-github">
+          <i class="fa fa-github-square">&nbsp; GitHub</i>
+        </a>
+      </li>
+    </ul>
+</nav>
+
+<nav class="container primary">
+    <a class="brand three columns" href="/">Dragon Knight</a>
+    <ul class="nine columns" style="list-style-type: none; padding: 0">
+      <li><a href="/">About</a></li>
+      <li><a href="/">Raid Team</a></li>
+      <li><a href="/">Calendar</a></li>
+    </ul>
+  </nav> -->
+
+<div class="band header">
+  <header class="container main">
+    <h1 class="logo"><a href="/">Dragon Knight</a></h1>
+  </header>
+</div>
+<div class="band navigation">
+  <nav class="container primary">
+    <ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/raid_team/">Raid Team</a></li>
+      <li><a href="/calendar/">Calendar</a></li>
+      <!-- <li><a href="#">Resources</a>
+        <ul>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Best in Slot</a></li>
+        </ul>
+      </li> -->
+    </ul>
+  </nav>
+</div>
+  </div>
+  <div class="band content">
+    <div class="container">
+      <script type="text/javascript">
+  // $(document).ready(
+  // function() {
+  //   var contestants = [];
+  //   var players = [];
+  //   
+  //     var name = "Bigchap";
+  //     var starting = "1883";
+  //     var server = "Boulderfist";
+  //     var main = "Bigchap";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Brisp";
+  //     var starting = "5679";
+  //     var server = "Boulderfist";
+  //     var main = "Bigchap";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Brasp";
+  //     var starting = "1529";
+  //     var server = "Boulderfist";
+  //     var main = "Bigchap";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Blackbutte";
+  //     var starting = "56465";
+  //     var server = "Boulderfist";
+  //     var main = "Blackbutte";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Bottlerocket";
+  //     var starting = "35842";
+  //     var server = "Boulderfist";
+  //     var main = "Blackbutte";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Butonz";
+  //     var starting = "409";
+  //     var server = "Maiev";
+  //     var main = "Buttonnzz";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Buttonnzz";
+  //     var starting = "4829";
+  //     var server = "Maiev";
+  //     var main = "Buttonnzz";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Damst";
+  //     var starting = "3456";
+  //     var server = "Maiev";
+  //     var main = "Damitus";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Deathsexay";
+  //     var starting = "6350";
+  //     var server = "Bloodscalp";
+  //     var main = "Deathsexay";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Evgenimalkin";
+  //     var starting = "121186";
+  //     var server = "Boulderfist";
+  //     var main = "Evgenimalkin";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Marshboa";
+  //     var starting = "136101";
+  //     var server = "Boulderfist";
+  //     var main = "Evgenimalkin";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Blakelively";
+  //     var starting = "12502";
+  //     var server = "Boulderfist";
+  //     var main = "Evgenimalkin";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Felene";
+  //     var starting = "22083";
+  //     var server = "Boulderfist";
+  //     var main = "Felene";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Flarez";
+  //     var starting = "176952";
+  //     var server = "Boulderfist";
+  //     var main = "Flarez";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Ghains";
+  //     var starting = "21710";
+  //     var server = "Boulderfist";
+  //     var main = "Ghains";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Baristan";
+  //     var starting = "5710";
+  //     var server = "Boulderfist";
+  //     var main = "Heilo";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Dubudee";
+  //     var starting = "32196";
+  //     var server = "Dunemaul";
+  //     var main = "Heilo";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Heilo";
+  //     var starting = "39497";
+  //     var server = "Dunemaul";
+  //     var main = "Heilo";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Schuch";
+  //     var starting = "33863";
+  //     var server = "Boulderfist";
+  //     var main = "Heilo";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Schuch";
+  //     var starting = "18048";
+  //     var server = "Dunemaul";
+  //     var main = "Heilo";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Kayzersoze";
+  //     var starting = "98025";
+  //     var server = "Boulderfist";
+  //     var main = "Kayzersoze";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Kordeadun";
+  //     var starting = "809";
+  //     var server = "Maiev";
+  //     var main = "Korfearon";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Morgainn";
+  //     var starting = "32920";
+  //     var server = "Sargeras";
+  //     var main = "Morganna";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Pyralisis";
+  //     var starting = "4726";
+  //     var server = "Bloodscalp";
+  //     var main = "Pyralisis";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Freeski";
+  //     var starting = "2355";
+  //     var server = "Boulderfist";
+  //     var main = "Skifree";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Halonos";
+  //     var starting = "8550";
+  //     var server = "Boulderfist";
+  //     var main = "Skifree";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Historian";
+  //     var starting = "7285";
+  //     var server = "Boulderfist";
+  //     var main = "Skifree";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Spicyice";
+  //     var starting = "6569";
+  //     var server = "Stonemaul";
+  //     var main = "Undercvrgnome";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Tresane";
+  //     var starting = "35824";
+  //     var server = "Boulderfist";
+  //     var main = "Tresane";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Admei";
+  //     var starting = "481";
+  //     var server = "Boulderfist";
+  //     var main = "Tresane";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Anziel";
+  //     var starting = "41325";
+  //     var server = "Boulderfist";
+  //     var main = "Tresane";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Varos";
+  //     var starting = "101821";
+  //     var server = "Boulderfist";
+  //     var main = "Varos";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Ventso";
+  //     var starting = "58236";
+  //     var server = "Boulderfist";
+  //     var main = "Ventso";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+  //     var name = "Ventsy";
+  //     var starting = "10512";
+  //     var server = "Boulderfist";
+  //     var main = "Ventso";
+  //     // var json = '{name:' + name + ',';
+  //     // json += 'starting:' + starting + ',';
+  //     // json += 'server:' + server + ',';
+  //     // json += 'main:' + main + '"}';
+  //     // console.log(json);
+  //     contestants.push({name: name, starting: starting, server: server, main: main});
+  //   
+
+  //   for (var i = 0; i < contestants.length; i++) {
+  //     // console.log(contestants[i]);
+  //     var name = contestants[i].name;
+  //     var server = contestants[i].server;
+  //     var main = contestants[i].main;
+  //     // console.log(name);
+  //     var url = "https://us.api.battle.net/wow/character/" + server + "/" + name  + "?fields=pvp&locale=en_US&apikey=3tgfhwvjya9h9kpekjdyz45q3uhj2978";
+  //     var data = $.parseJSON($.ajax({
+  //       url: url,
+  //       dataType: 'json',
+  //       async: false
+  //     }).responseText);
+  //     var weekend_kills = data.totalHonorableKills - parseInt(contestants[i].starting);
+  //     // console.log(players[]);
+  //     // players.push({name: main, kills: weekend_kills});
+  //     var found = 0;
+  //     for (var player in players) {
+  //       var playerName = players[player].name;
+  //       var playerKills = players[player].kills;
+  //       // console.log(main + " " + players[player].name);
+  //       if (players[player].name == main) {
+  //         // console.log("Found Match: " + playerName + " " + main);
+  //         // console.log("Kills: " + playerKills); 
+  //         found = 1;
+  //         playerKills = playerKills + weekend_kills;
+  //         players[player].kills = playerKills;
+  //         // console.log(players[name]);
+  //       }
+  //     }
+
+  //     if (found == 0) {
+  //       players.push({name: main, kills: weekend_kills});
+  //     }
+  //   }
+
+  //   var sortable = [];
+  //   for (var player in players) {
+  //     sortable.push([players[player].name, players[player].kills]);
+  //   }
+  //   sortable.sort(function(a, b) {return b[1] - a[1]});
+  //   var innerHTML;
+  //   for (var i = 0; i < sortable.length; i++) {
+  //     var playerName = sortable[i][0];
+  //     var playerHK = sortable[i][1];
+  //     innerHTML += "<tr><td>" + (i+1) + "</td><td style='min-width: 400px;'>" + playerName + "</td><td>" + playerHK + "</td></tr>";
+  //   }
+  //   // console.log(innerHTML);
+  //   $("#leaderboard").html(innerHTML);
+  // });
+</script>
+
+<div class="row">
+  <div class="eight columns offset-by-two post">
+    <h4>Honorable Kill Event</h4>
+    <b>Date:</b>
+    <ul>
+      <li>Feb 5th to Feb 7th (7PM Start and Finish)</li>
+      <li>Week of Bonus Honor Event</li>
+      <li>Sign up on guild calendar</li>
+    </ul>
+    <b>Format:</b>
+    <ul>
+      <li>Winner gets to change the guild tabard and temporarily gets a special guild rank</li>
+      <li>2nd and 3rd get a special guild rank</li>
+      <li>Honorable kills will be recorded when event starts</li>
+      <li>You can compete with multiple characters</li>
+    </ul>
+    <b>Rules:</b>
+    <ul>
+      <li>The rules are simple. Get as many honorable kills as you can during the event</li>
+      <li>Check back here often to see the leaderboard</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">  
+  <div class="eight columns offset-by-two post">
+    <h4>Honorable Kills Event Leaderboard</h4>
+    <table class="table">
+      <tbody id="leaderboard">
+      </tbody>
+    </table>
+  </div>
+</div>
+    </div>
+  </div>
+  
+  <div class="band footer">
+    <footer class="container">
+      <div class="row">
+        <div class="one-third column mmoc">
+          <h6>MMO Champion</h6>
+          
+            <li><a id="mmo1"></a></li>
+          
+            <li><a id="mmo2"></a></li>
+          
+            <li><a id="mmo3"></a></li>
+          
+            <li><a id="mmo4"></a></li>
+          
+            <li><a id="mmo5"></a></li>
+          
+        </div>
+        <div class="one-third column wclogs">
+          <h6>Warcraft Logs</h6>
+          
+            <a id="link1">
+              <div class="row">
+                <b class="one-half column" id="title1"></b>
+                <div class="one-half column" id="kills1" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day1"></div>
+                <div class="one-half column" id="wipes1" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link2">
+              <div class="row">
+                <b class="one-half column" id="title2"></b>
+                <div class="one-half column" id="kills2" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day2"></div>
+                <div class="one-half column" id="wipes2" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link3">
+              <div class="row">
+                <b class="one-half column" id="title3"></b>
+                <div class="one-half column" id="kills3" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day3"></div>
+                <div class="one-half column" id="wipes3" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link4">
+              <div class="row">
+                <b class="one-half column" id="title4"></b>
+                <div class="one-half column" id="kills4" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day4"></div>
+                <div class="one-half column" id="wipes4" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+            <a id="link5">
+              <div class="row">
+                <b class="one-half column" id="title5"></b>
+                <div class="one-half column" id="kills5" style="text-align: right;"></div>
+              </div>
+              <div class="row">
+                <div class="one-half column" id="day5"></div>
+                <div class="one-half column" id="wipes5" style="text-align: right;"></div>
+              </div>
+            </a>
+          
+        </div>
+        <div class="one-third column streamers">
+          <h6>Streamers</h6>
+            
+            <a id="Bigchap">
+              <div class="row">
+                <b class="one-half column">Bigchap</b>
+                <div class="one-half column" id="BigchapStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="BigchapTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="BigchapGame"></div>
+              </div>
+            </a>
+            
+            <a id="Cptkrunk">
+              <div class="row">
+                <b class="one-half column">Cptkrunk</b>
+                <div class="one-half column" id="CptkrunkStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="CptkrunkTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="CptkrunkGame"></div>
+              </div>
+            </a>
+            
+            <a id="Damitus">
+              <div class="row">
+                <b class="one-half column">Damitus</b>
+                <div class="one-half column" id="DamitusStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="DamitusTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="DamitusGame"></div>
+              </div>
+            </a>
+            
+            <a id="Tresane">
+              <div class="row">
+                <b class="one-half column">Tresane</b>
+                <div class="one-half column" id="TresaneStatus" style="text-align: right;"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="TresaneTitle"></div>
+              </div>
+              <div class="row" id="stream">
+                <div id="TresaneGame"></div>
+              </div>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
